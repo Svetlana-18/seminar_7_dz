@@ -42,6 +42,8 @@ void PrintMatrix(int[,] matrix)
 
 void MeanArithmeticColumn(int[,] array)
 {
+     Console.WriteLine($"Среднее арифметическое элементов столбца массива");
+     Console.WriteLine ();
     for (int i = 0; i < array.GetLength(0); i++)
     {
         double meanarithmetic = 0;
@@ -51,7 +53,7 @@ void MeanArithmeticColumn(int[,] array)
         }
         meanarithmetic = Math.Round(meanarithmetic / array.GetLength(1), 1);
 
-        Console.WriteLine($"Среднее арифметическое элементов {i + 1} столбца массива  = {meanarithmetic}");
+        Console.WriteLine($" {i + 1}  = {meanarithmetic}");
     }
     Console.WriteLine();
 
@@ -59,4 +61,5 @@ void MeanArithmeticColumn(int[,] array)
 
 int[,] array = CreateMtrixRndInt(5, 5, 1, 10);
 PrintMatrix(array);
+Console.WriteLine ();
 MeanArithmeticColumn(array);

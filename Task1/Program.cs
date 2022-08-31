@@ -46,15 +46,14 @@ void PrintMatrix(int[,] matrix)
 void SearchElement(int[,] array1)
 
 {
-
-    if (line <= array1.GetLength(0) && column <= array1.GetLength(1))
+    if (line <= 0 && column <= 0 || line <= 0 || column <= 0) 
+        Console.WriteLine($" Вы ввели неверное значение, введите положительные целые числа");
+    else if (line <= array1.GetLength(0) && column <= array1.GetLength(1))
         Console.WriteLine($" Значение элемента на данной позиции = {array1[line - 1, column - 1]}");
-    else if (line <= 0 && column <= 0 || line <= 0 || column <= 0)
-        Console.WriteLine($" Вы ввели неверное значение, повторите ввод");
     else Console.WriteLine($" Такого элемента в массиве нет");
 }
 Console.WriteLine();
-int[,] array1 = CreateMtrixRndInt(3, 4, -99, 99);
+int[,] array1 = CreateMtrixRndInt(7, 7, -99, 99);
 PrintMatrix(array1);
 Console.WriteLine();
 SearchElement(array1);
